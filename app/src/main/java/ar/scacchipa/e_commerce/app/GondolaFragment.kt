@@ -7,15 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
-import ar.scacchipa.e_commerce.databinding.GondolaScreenBinding
+import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.getFruitList
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
+import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
 
 class GondolaFragment: Fragment() {
 
-    private var binding: GondolaScreenBinding? = null
+    private var binding: ScreenGondolaBinding? = null
     private val commonItemsVM: CommonItemsViewModel by viewModels()
     private val highlightedItemsVM: HighlightedItemsViewModel by viewModels()
 
@@ -30,7 +30,7 @@ class GondolaFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = GondolaScreenBinding.inflate(inflater, container, false)
+        binding = ScreenGondolaBinding.inflate(inflater, container, false)
 
         binding?.highItemRecyclerView?.layoutManager = LinearLayoutManager(
             container?.context, LinearLayoutManager.HORIZONTAL, false)

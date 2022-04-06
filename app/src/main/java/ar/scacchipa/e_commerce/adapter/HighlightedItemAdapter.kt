@@ -1,9 +1,11 @@
-package ar.scacchipa.e_commerce
+package ar.scacchipa.e_commerce.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import ar.scacchipa.e_commerce.Fruit
+import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.databinding.HighlightItemLayoutBinding
 
 class HighlightedItemAdapter(

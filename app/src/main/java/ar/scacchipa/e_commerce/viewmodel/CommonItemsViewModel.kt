@@ -1,7 +1,8 @@
-package ar.scacchipa.e_commerce
+package ar.scacchipa.e_commerce.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ar.scacchipa.e_commerce.Fruit
 
 class CommonItemsViewModel: ViewModel() {
 

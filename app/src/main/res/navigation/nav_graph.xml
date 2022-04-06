@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/gondolaFragment"
-        android:name="ar.scacchipa.e_commerce.GondolaFragment"
+        android:name="ar.scacchipa.e_commerce.app.GondolaFragment"
         android:label="GondolaFragment" >
         <action
             android:id="@+id/action_gondolaFragment_to_detailFragment"
@@ -17,10 +17,10 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="ar.scacchipa.e_commerce.DetailFragment"
+        android:name="ar.scacchipa.e_commerce.app.DetailFragment"
         android:label="DetailFragment" />
     <fragment
         android:id="@+id/cartFragment"
-        android:name="ar.scacchipa.e_commerce.CartFragment"
+        android:name="ar.scacchipa.e_commerce.app.CartFragment"
         android:label="CartFragment" />
 </navigation>

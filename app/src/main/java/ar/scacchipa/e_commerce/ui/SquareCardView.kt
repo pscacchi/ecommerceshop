@@ -1,4 +1,4 @@
-package ar.scacchipa.e_commerce
+package ar.scacchipa.e_commerce.ui
 
 import android.content.Context
 import android.util.AttributeSet

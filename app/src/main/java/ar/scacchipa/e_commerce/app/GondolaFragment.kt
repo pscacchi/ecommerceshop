@@ -1,4 +1,4 @@
-package ar.scacchipa.e_commerce
+package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
+import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
 import ar.scacchipa.e_commerce.databinding.GondolaScreenBinding
+import ar.scacchipa.e_commerce.getFruitList
+import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 
 class GondolaFragment: Fragment() {
 

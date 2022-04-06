@@ -57,6 +57,7 @@
         app:srcCompat="@drawable/ic_cart_svgrepo_com" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/highItemRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -69,6 +70,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commonItemrecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"

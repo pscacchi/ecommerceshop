@@ -23,6 +23,7 @@ class HighlightedItemAdapter(
         val item = itemList[position]
         holder.binding.highItemTitle.text = item.title
         holder.binding.highItemPrice.text = "$" + "%.${2}f".format(item.price)
+        holder.binding.highItemImageView.setImageResource(item.imageId)
     }
 
     override fun getItemCount(): Int {

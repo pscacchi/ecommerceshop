@@ -7,7 +7,7 @@ class Fruit(
     val ranking: Int,
     val highlighted: Boolean,
     val favorite: Boolean,
-    val image: Int
+    val imageId: Int
 )
 
 fun getFruitList(): List<Fruit> {

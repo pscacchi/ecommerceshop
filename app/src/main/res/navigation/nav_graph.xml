@@ -10,7 +10,7 @@
         android:label="GondolaFragment" >
         <action
             android:id="@+id/action_gondolaFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"/>
         <action
             android:id="@+id/action_gondolaFragment_to_cartFragment"
             app:destination="@id/cartFragment" />
@@ -18,7 +18,11 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="ar.scacchipa.e_commerce.app.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment" >
+        <argument
+            android:name="item"
+            app:argType="ar.scacchipa.e_commerce.Fruit" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="ar.scacchipa.e_commerce.app.CartFragment"

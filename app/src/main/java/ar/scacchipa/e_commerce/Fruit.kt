@@ -1,14 +1,75 @@
 package ar.scacchipa.e_commerce
 
-class Fruit(
-    val title: String,
-    val price: Double,
-    val category: String,
-    val ranking: Int,
-    val highlighted: Boolean,
-    val favorite: Boolean,
+import android.os.Build
+import android.os.Parcel
+import android.os.Parcelable
+import androidx.annotation.RequiresApi
+
+class Fruit : Parcelable {
+
+    val title: String
+    val price: Double
+    val category: String
+    val ranking: Int
+    val highlighted: Boolean
+    val favorite: Boolean
     val imageId: Int
-)
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    constructor(parcel: Parcel) {
+        title = parcel.readString()?:""
+        price = parcel.readDouble()
+        category = parcel.readString()?:""
+        ranking = parcel.readInt()
+        highlighted = parcel.readBoolean()
+        favorite = parcel.readBoolean()
+        imageId = parcel.readInt()
+    }
+
+    constructor(
+        title: String,
+        price: Double,
+        category: String,
+        ranking: Int,
+        highlighted: Boolean,
+        favorite: Boolean,
+        imageId: Int
+    ) {
+        this.title = title
+        this.price = price
+        this.category = category
+        this.ranking = ranking
+        this.highlighted = highlighted
+        this.favorite = favorite
+        this.imageId = imageId
+    }
+    @RequiresApi(Build.VERSION_CODES.Q)
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(title)
+        parcel.writeDouble(price)
+        parcel.writeString(category)
+        parcel.writeInt(ranking)
+        parcel.writeBoolean(highlighted)
+        parcel.writeBoolean(favorite)
+        parcel.writeInt(imageId)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Fruit> {
+        @RequiresApi(Build.VERSION_CODES.Q)
+        override fun createFromParcel(parcel: Parcel): Fruit {
+            return Fruit(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Fruit?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
+
 
 fun getFruitList(): List<Fruit> {
     return listOf<Fruit>(

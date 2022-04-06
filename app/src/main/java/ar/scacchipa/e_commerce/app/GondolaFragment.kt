@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.scacchipa.e_commerce.adapter.CommonItemAdapter
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
 import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.getFruitList
@@ -36,6 +37,9 @@ class GondolaFragment: Fragment() {
             container?.context, LinearLayoutManager.HORIZONTAL, false)
         binding?.highItemRecyclerView?.adapter = HighlightedItemAdapter(highlightedItemsVM.getHightedItems())
 
+        binding?.commonItemrecyclerView?.layoutManager = LinearLayoutManager(
+            container?.context, LinearLayoutManager.VERTICAL, false)
+        binding?.commonItemrecyclerView?.adapter = CommonItemAdapter(commonItemsVM.getCommonItems())
 
         return binding?.root
     }

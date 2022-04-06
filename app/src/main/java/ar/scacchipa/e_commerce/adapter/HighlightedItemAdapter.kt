@@ -22,7 +22,6 @@ class HighlightedItemAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_cardview_highlight_item, parent, false)
-
         return ViewHolder(view)
     }
 
@@ -32,7 +31,7 @@ class HighlightedItemAdapter(
         holder.binding.highlightedItemTitle.text = item.title
         holder.binding.highlightedItemPrice.text = "$" + "%.${2}f".format(item.price)
         holder.binding.highItemImageView.setImageResource(item.imageId)
-        holder.binding.highItemConstrint.setOnClickListener { v ->
+        holder.binding.highItemConstraint.setOnClickListener { v ->
             val action: NavDirections = GondolaFragmentDirections
                 .actionGondolaFragmentToDetailFragment(item)
             v.findNavController().navigate(action)

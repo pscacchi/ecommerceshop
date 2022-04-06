@@ -5,98 +5,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detailItemImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="-20dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
+    <View
+        android:id="@+id/backGroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="445dp" />
+        app:layout_constraintGuide_percent="0.6" />
 
-    <TextView
-        android:id="@+id/textView5"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
         android:text="Title"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/category"
+        app:layout_constraintStart_toEndOf="@+id/ranking"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
-    <TextView
-        android:id="@+id/textView6"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:text="Category"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <TextView
-        android:id="@+id/textView7"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="Ranking"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="@+id/title" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favorite"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/title"
         app:srcCompat="@android:drawable/btn_star_big_off" />
 
-    <Button
-        android:id="@+id/button2"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addItemButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="4dp"
-        android:text="Button"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Add to Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="90dp" />
+        app:layout_constraintGuide_percent="0.85" />
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backDetailButton"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Back Button"
+        android:background="@drawable/little_rounded_corner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_left_arrow_svgrepo_com" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

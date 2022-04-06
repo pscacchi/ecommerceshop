@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="22dp" />
+            <solid android:color="@android:color/tab_indicator_text"/>
+        </shape>
+    </item>
+
+    <!-- State Pressed-->
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="22dp" />
+            <solid android:color="@color/teal_200" />
+        </shape>
+    </item>
+
+    <!-- State Enabled -->
+    <item android:state_enabled="true">
+        <shape>
+            <corners android:radius="22dp" />
+            <solid android:color="@color/purple_200"/>
+        </shape>
+    </item>
+
+</selector>

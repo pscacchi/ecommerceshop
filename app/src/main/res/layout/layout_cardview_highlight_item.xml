@@ -10,7 +10,7 @@
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/highItemConstrint"
+        android:id="@+id/highItemConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/purple_200">
@@ -24,7 +24,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="Item" />
 
         <TextView
             android:id="@+id/highlightedItemTitle"

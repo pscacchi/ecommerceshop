@@ -22,6 +22,9 @@
         <argument
             android:name="item"
             app:argType="ar.scacchipa.e_commerce.Fruit" />
+        <action
+            android:id="@+id/action_detailFragment_to_gondolaFragment"
+            app:destination="@id/gondolaFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"

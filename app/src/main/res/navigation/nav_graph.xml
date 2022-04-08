@@ -21,13 +21,23 @@
         android:label="DetailFragment" >
         <argument
             android:name="item"
-            app:argType="ar.scacchipa.e_commerce.Fruit" />
+            app:argType="ar.scacchipa.e_commerce.data.Item" />
         <action
             android:id="@+id/action_detailFragment_to_gondolaFragment"
             app:destination="@id/gondolaFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="ar.scacchipa.e_commerce.app.CartFragment"
-        android:label="CartFragment" />
+        android:label="CartFragment" >
+        <argument
+            android:name="submittedCard"
+            app:argType="ar.scacchipa.e_commerce.data.CartItem" />
+        <action
+            android:id="@+id/action_cartFragment_to_gondolaFragment"
+            app:destination="@id/gondolaFragment" />
+    </fragment>
 </navigation>

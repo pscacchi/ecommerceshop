@@ -1,14 +1,13 @@
 package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
+import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.ScreenDetailBinding
 
 class DetailFragment: Fragment() {
@@ -23,8 +22,6 @@ class DetailFragment: Fragment() {
     ): View? {
         binding = ScreenDetailBinding.inflate(inflater, container, false)
 
-        Log.i("DETAIL", args.item.title)
-
         binding?.let { bind ->
             bind.title.text = args.item.title
             bind.ranking.text = "#${args.item.ranking}"
@@ -35,13 +32,17 @@ class DetailFragment: Fragment() {
             )
             bind.detailItemImage.setImageResource(args.item.imageId)
             bind.addItemButton.text = "Add to cart | $" + "%.${2}f".format(args.item.price)
+            bind.addItemButton.setOnClickListener { view ->
+                val action = DetailFragmentDirections
+                    .actionDetailFragmentToCartFragment(CartItem( args.item,1))
+                view.findNavController().navigate(action)
+            }
             bind.backDetailButton.setOnClickListener { view ->
-                val action: NavDirections = DetailFragmentDirections
+                val action = DetailFragmentDirections
                     .actionDetailFragmentToGondolaFragment()
                 view.findNavController().navigate(action)
             }
         }
         return binding?.root
     }
-
 }

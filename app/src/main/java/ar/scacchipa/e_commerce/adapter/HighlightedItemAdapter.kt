@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import ar.scacchipa.e_commerce.Fruit
 import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.app.GondolaFragmentDirections
+import ar.scacchipa.e_commerce.data.Item
 import ar.scacchipa.e_commerce.databinding.LayoutCardviewHighlightItemBinding
 
 class HighlightedItemAdapter(
-    private val itemList: List<Fruit>
+    private val itemList: List<Item>
 ): RecyclerView.Adapter<HighlightedItemAdapter.ViewHolder>() {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {

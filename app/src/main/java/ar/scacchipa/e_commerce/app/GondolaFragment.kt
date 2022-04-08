@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.scacchipa.e_commerce.adapter.CommonItemAdapter
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
+import ar.scacchipa.e_commerce.data.getFruitList
 import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
-import ar.scacchipa.e_commerce.getFruitList
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
 

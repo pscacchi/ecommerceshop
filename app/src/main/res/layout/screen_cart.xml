@@ -15,7 +15,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/backCartButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

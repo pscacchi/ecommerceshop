@@ -39,5 +39,5 @@
         <action
             android:id="@+id/action_cartFragment_to_gondolaFragment"
             app:destination="@id/gondolaFragment" />
-    </fragment>
+    </fragment><action android:id="@+id/action_global_cartFragment" app:destination="@id/cartFragment"/>
 </navigation>

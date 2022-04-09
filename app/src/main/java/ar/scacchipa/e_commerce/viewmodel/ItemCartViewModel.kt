@@ -16,7 +16,7 @@ class ItemCartViewModel: ViewModel() {
     fun addCard(item: Item?, count: Int) {
         cards.value?.let { _cards ->
             val mutableList = _cards.toMutableList()
-            val card = mutableList.find { card -> card.item == item }
+            val card = mutableList.find { card -> card.item?.title == item?.title }
             if (card != null) {
                 card.itemCount += count
             } else {

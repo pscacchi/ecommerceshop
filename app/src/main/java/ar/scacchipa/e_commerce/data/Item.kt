@@ -6,43 +6,26 @@ import android.os.Parcelable
 import androidx.annotation.RequiresApi
 import ar.scacchipa.e_commerce.R
 
-class Item : Parcelable {
-    val title: String
-    val price: Double
-    val category: String
-    val ranking: Int
-    val highlighted: Boolean
-    val favorite: Boolean
-    val imageId: Int
+data class Item(
+    val title: String,
+    val price: Double,
+    val category: String,
+    val ranking: Int,
+    val highlighted: Boolean,
+    val favorite: Boolean,
+    val imageId: Int)
+: Parcelable {
 
     @RequiresApi(Build.VERSION_CODES.Q)
-    constructor(parcel: Parcel) {
-        title = parcel.readString()?:""
-        price = parcel.readDouble()
-        category = parcel.readString()?:""
-        ranking = parcel.readInt()
-        highlighted = parcel.readBoolean()
-        favorite = parcel.readBoolean()
-        imageId = parcel.readInt()
-    }
+    constructor(parcel: Parcel) : this(
+        title = parcel.readString()?:"",
+        price = parcel.readDouble(),
+        category = parcel.readString()?:"",
+        ranking = parcel.readInt(),
+        highlighted = parcel.readBoolean(),
+        favorite = parcel.readBoolean(),
+        imageId = parcel.readInt())
 
-    constructor(
-        title: String,
-        price: Double,
-        category: String,
-        ranking: Int,
-        highlighted: Boolean,
-        favorite: Boolean,
-        imageId: Int
-    ) {
-        this.title = title
-        this.price = price
-        this.category = category
-        this.ranking = ranking
-        this.highlighted = highlighted
-        this.favorite = favorite
-        this.imageId = imageId
-    }
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)

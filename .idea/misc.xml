@@ -8,6 +8,9 @@
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/ic_cart_svgrepo_com.xml" value="0.1475" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/ic_launcher_background.xml" value="0.124" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/ic_left_arrow_svgrepo_com.xml" value="0.1115" />
+        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/ic_less_square.xml" value="0.1645" />
+        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/ic_plus_square.xml" value="0.1" />
+        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/little_rounded_corner.xml" value="0.1325" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/little_rounder_corner.xml" value="0.1" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/rounded_corner.xml" value="0.1" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/drawable/rounded_rectangle.xml" value="0.2055" />
@@ -19,8 +22,8 @@
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/highlight_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/highlight_view.xml" value="0.152" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/initial_screen.xml" value="0.1" />
-        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/layout_cardview_cart_item.xml" value="0.176" />
-        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/layout_cardview_gondola_item_card.xml" value="0.1" />
+        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/layout_cardview_cart_item.xml" value="0.6" />
+        <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/layout_cardview_gondola_item_card.xml" value="0.2" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/layout_cardview_highlight_item.xml" value="0.1954954954954955" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/rounded_rectangle.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/PScacchi/AndroidStudioProjects/Ecommerce/app/src/main/res/layout/screen_cart.xml" value="0.40646853146853146" />

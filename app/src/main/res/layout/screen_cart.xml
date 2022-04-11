@@ -66,14 +66,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="563dp" />
+        app:layout_constraintGuide_percent="0.77017784" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="90dp" />
+        app:layout_constraintGuide_percent="0.879617" />
 
     <Button
         android:id="@+id/paymentButton"
@@ -95,7 +95,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:text="Total:"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        android:textColor="@color/secundaryTitle"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
@@ -107,6 +108,7 @@
         android:layout_marginEnd="30dp"
         android:text="$ 0.00"
         android:textSize="34sp"
+        android:textColor="@color/mainPrice"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />

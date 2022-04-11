@@ -34,10 +34,10 @@ class CartFragment: Fragment() {
             binding?.cartRecyclerView?.adapter = CartCardAdapter(itemCartItemVM.getCardList())
         }
         binding?.let { _binding ->
-            _binding.cartTotal.text =
+            _binding.cartTotal.text = "$%.${2}f".format(
                 itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
                     acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
-                }.toString()
+                })
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
             _binding.cartRecyclerView.adapter = CartCardAdapter(itemCartItemVM.getCardList())
             _binding.backCartButton.setOnClickListener { view ->

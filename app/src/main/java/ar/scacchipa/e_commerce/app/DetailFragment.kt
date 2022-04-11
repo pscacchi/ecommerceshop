@@ -33,10 +33,7 @@ class DetailFragment: Fragment() {
                 bind.title.text = _item.title
                 bind.ranking.text = "#${_item.ranking}"
                 bind.category.text = _item.category
-                bind.favorite.setImageResource(
-                    if (_item.favorite) android.R.drawable.btn_star_big_on
-                    else android.R.drawable.btn_star_big_off
-                )
+                refreshView()
                 bind.favorite.setOnClickListener {
                     detailViewModel.toggleFavorite()
                 }

@@ -22,6 +22,9 @@ class ItemCartViewModel: ViewModel() {
                 val card = mutableList.find { card -> card.item?.title == item.title }
                 if (card != null) {
                     card.itemCount += count
+                    if (card.itemCount <= 0) {
+                        mutableList.remove(card)
+                    }
                 } else {
                     mutableList.add(CartItem(item, 1))
                 }

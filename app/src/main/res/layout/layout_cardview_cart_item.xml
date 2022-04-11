@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    app:cardCornerRadius="30dp"
+    app:cardCornerRadius="15dp"
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/cartItemImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -21,6 +21,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/Theme.Ecommerce"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +30,16 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/cartItemTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:text="Title"
+            android:textColor="@color/card_title"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/cartItemPrice"
+            app:layout_constraintEnd_toStartOf="@+id/removeOne"
             app:layout_constraintStart_toEndOf="@+id/ranking"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.162" />
@@ -47,6 +51,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginBottom="24dp"
             android:text="Price"
+            android:textColor="@color/secundaryPrice"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cartItemImageView" />
@@ -57,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="TextView"
+            android:textColor="@color/ranking"
             app:layout_constraintBottom_toBottomOf="@+id/cartItemTitle"
             app:layout_constraintStart_toEndOf="@+id/cartItemImageView"
             app:layout_constraintTop_toTopOf="@+id/cartItemTitle" />
@@ -68,7 +74,7 @@
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="1"
-            android:textSize="20sp"
+            android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.79"
@@ -79,8 +85,13 @@
             android:id="@+id/removeOne"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/little_rounded_corner"
             android:contentDescription="Remove One"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_less_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/elementCount"
@@ -91,7 +102,12 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/little_rounded_corner"
             android:contentDescription="Add One"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_plus_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"
             app:layout_constraintDimensionRatio="w,1:1"
             app:layout_constraintStart_toEndOf="@+id/elementCount"

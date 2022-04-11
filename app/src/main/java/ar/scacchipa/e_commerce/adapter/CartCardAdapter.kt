@@ -30,7 +30,7 @@ class CartCardAdapter (
             holder.binding.cartItemPrice.text = "$" + "%.${2}f".format(_item.price)
             holder.binding.cartItemImageView.setImageResource(_item.imageId)
             holder.binding.elementCount.text = card.itemCount.toString()
-            holder.binding.ranking.text = "$" + "%.${2}f".format(_item.price)
+            holder.binding.ranking.text = "#${_item.ranking}"
             holder.binding.addOne.setOnClickListener { view ->
                 val action = NavGraphDirections
                     .actionGlobalCartFragment(CartItem(_item, 1))

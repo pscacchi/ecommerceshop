@@ -76,7 +76,7 @@
         app:layout_constraintGuide_end="90dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/paymentButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"

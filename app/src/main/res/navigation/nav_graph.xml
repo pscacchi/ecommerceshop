@@ -35,7 +35,8 @@
         android:label="CartFragment" >
         <argument
             android:name="submittedCard"
-            app:argType="ar.scacchipa.e_commerce.data.CartItem" />
+            app:argType="ar.scacchipa.e_commerce.data.CartItem"
+            app:nullable="true" />
         <action
             android:id="@+id/action_cartFragment_to_gondolaFragment"
             app:destination="@id/gondolaFragment" />

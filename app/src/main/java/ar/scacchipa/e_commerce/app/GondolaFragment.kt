@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.scacchipa.e_commerce.NavGraphDirections
 import ar.scacchipa.e_commerce.adapter.CommonItemAdapter
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
 import ar.scacchipa.e_commerce.data.getFruitList
@@ -40,6 +42,12 @@ class GondolaFragment: Fragment() {
         binding?.commonItemrecyclerView?.layoutManager = LinearLayoutManager(
             container?.context, LinearLayoutManager.VERTICAL, false)
         binding?.commonItemrecyclerView?.adapter = CommonItemAdapter(commonItemsVM.getCommonItems())
+
+        binding?.cartImageView?.setOnClickListener { view ->
+            val action = NavGraphDirections
+                .actionGlobalCartFragment( null )
+            view.findNavController().navigate(action)
+        }
 
         return binding?.root
     }

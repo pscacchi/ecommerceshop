@@ -1,10 +1,10 @@
 package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -28,19 +28,36 @@ class CartFragment: Fragment() {
     ): View? {
         binding = ScreenCartBinding.inflate(inflater, container, false)
         itemCartItemVM.addCard(
-            args.submittedCard.item,
-            args.submittedCard.itemCount)
+            args.submittedCard?.item,
+            args.submittedCard?.itemCount?:0)
+        itemCartItemVM.addObserver(this) {
+            binding?.cartRecyclerView?.adapter = CartCardAdapter(itemCartItemVM.getCardList())
+        }
         binding?.let { _binding ->
             _binding.cartTotal.text =
                 itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
                     acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
                 }.toString()
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
-            Log.i("CartFragment", "X->" + itemCartItemVM.getCardList().size.toString())
             _binding.cartRecyclerView.adapter = CartCardAdapter(itemCartItemVM.getCardList())
             _binding.backCartButton.setOnClickListener { view ->
                 val action = CartFragmentDirections.actionCartFragmentToGondolaFragment()
                 view.findNavController().navigate(action)
+            }
+            _binding.paymentButton.setOnClickListener { view ->
+                val itemList = itemCartItemVM.getCardList()
+                if (itemList.isNotEmpty()) {
+                    val countText =
+                        when (itemCartItemVM.getCardList().sumOf { item -> item.itemCount }) {
+                            1 -> "a item"
+                            2 -> "two items"
+                            3 -> "three items"
+                            else -> "a lot of things"
+                        }
+                    Toast.makeText(view.context, "You have bought $countText", Toast.LENGTH_SHORT)
+                        .show()
+                }
+                itemCartItemVM.clear()
             }
         }
         return binding?.root

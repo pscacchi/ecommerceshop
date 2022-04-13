@@ -18,17 +18,17 @@ class ItemCartViewModel: ViewModel() {
     fun addCard(item: Item?, count: Int) {
         if (item != null) {
             cards.value?.let { _cards ->
-                val mutableList = _cards.toMutableList()
-                val card = mutableList.find { card -> card.item?.title == item.title }
+                val mutableCopyList = _cards.map { it.copy() }.toMutableList()
+                val card = mutableCopyList.find { card -> card.item?.title == item.title }
                 if (card != null) {
                     card.itemCount += count
                     if (card.itemCount <= 0) {
-                        mutableList.remove(card)
+                        mutableCopyList.remove(card)
                     }
                 } else {
-                    mutableList.add(CartItem(item, 1))
+                    mutableCopyList.add(CartItem(item, 1))
                 }
-                cards.value = mutableList
+                cards.value = mutableCopyList
             }
         }
     }

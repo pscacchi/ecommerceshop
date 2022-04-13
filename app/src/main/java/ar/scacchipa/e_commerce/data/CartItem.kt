@@ -3,19 +3,14 @@ package ar.scacchipa.e_commerce.data
 import android.os.Parcel
 import android.os.Parcelable
 
-class CartItem : Parcelable {
-    var item: Item?
-    var itemCount: Int
+data class CartItem(
+    var item: Item?,
+    var itemCount: Int)
+    : Parcelable {
 
-    constructor(parcel: Parcel) {
-        item = parcel.readParcelable(Item::class.java.classLoader)
-        itemCount = parcel.readInt()
-    }
-
-    constructor(item: Item?, itemCount: Int) {
-        this.item = item
-        this.itemCount = itemCount
-    }
+    constructor(parcel: Parcel): this(
+        item = parcel.readParcelable(Item::class.java.classLoader),
+        itemCount = parcel.readInt())
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeParcelable(item, 0)

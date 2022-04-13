@@ -2,13 +2,14 @@ package ar.scacchipa.e_commerce.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.LayoutCardviewCartItemBinding
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
 class CartCardAdapter (
-    private val itemList: List<CartItem>,
+    var cardList: List<CartItem>,
     private val itemCardVM: ItemCartViewModel
 ): RecyclerView.Adapter<CartCardAdapter.ViewHolder>() {
 
@@ -22,7 +23,7 @@ class CartCardAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val card = itemList[position]
+        val card = cardList[position]
         card.item?.let { _item ->
             holder.binding.cartItemTitle.text = _item.title
             holder.binding.cartItemPrice.text = "$" + "%.${2}f".format(_item.price)
@@ -39,6 +40,31 @@ class CartCardAdapter (
     }
 
     override fun getItemCount(): Int {
-        return itemList.size
+        return cardList.size
+    }
+
+    fun updateCardList(newList: List<CartItem>) {
+        updateCardList(this.cardList, newList)
+    }
+    private fun updateCardList(oldList: List<CartItem>, newList: List<CartItem>) {
+        val diff = DiffUtil.calculateDiff(object : DiffUtil.Callback() {
+            override fun getOldListSize(): Int {
+                return oldList.size
+            }
+
+            override fun getNewListSize(): Int {
+                return newList.size
+            }
+
+            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return oldList[oldItemPosition] == newList[newItemPosition]
+            }
+
+            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return oldList[oldItemPosition] === newList[newItemPosition]
+            }
+        })
+        diff.dispatchUpdatesTo(this)
+        this.cardList = newList
     }
 }

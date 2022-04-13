@@ -36,9 +36,8 @@ class CartFragment: Fragment() {
             args.submittedCard?.item,
             args.submittedCard?.itemCount?:0)
         itemCartItemVM.addObserver(this) {
-            binding?.cartRecyclerView?.adapter = CartCardAdapter(
-                itemCartItemVM.getCardList(),
-                itemCartItemVM)
+            (binding?.cartRecyclerView?.adapter as CartCardAdapter)
+                .updateCardList(itemCartItemVM.getCardList())
         }
         binding?.let { _binding ->
             _binding.cartTotal.text = "$%.${2}f".format(

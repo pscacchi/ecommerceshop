@@ -1,15 +1,15 @@
 package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.adapter.CartCardAdapter
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.ScreenCartBinding
@@ -20,6 +20,11 @@ class CartFragment: Fragment() {
     private val itemCartItemVM: ItemCartViewModel by activityViewModels()
     private val args: CartFragmentArgs by navArgs()
     private var binding: ScreenCartBinding? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,10 +45,7 @@ class CartFragment: Fragment() {
                 })
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
             _binding.cartRecyclerView.adapter = CartCardAdapter(itemCartItemVM.getCardList())
-            _binding.backCartButton.setOnClickListener { view ->
-                val action = CartFragmentDirections.actionCartFragmentToGondolaFragment()
-                view.findNavController().navigate(action)
-            }
+
             _binding.paymentButton.setOnClickListener { view ->
                 val itemList = itemCartItemVM.getCardList()
                 if (itemList.isNotEmpty()) {
@@ -61,6 +63,22 @@ class CartFragment: Fragment() {
             }
         }
         return binding?.root
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_menu, menu)
+        menu.findItem(R.id.action_back).isVisible = true
+        menu.findItem(R.id.action_cart).isVisible = false
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_back -> {
+                val action: NavDirections = CartFragmentDirections
+                    .actionCartFragmentToGondolaFragment()
+                findNavController().navigate(action)
+            }
+        }
+        return true
     }
 
     override fun onDestroy() {

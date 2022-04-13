@@ -3,16 +3,23 @@ package ar.scacchipa.e_commerce.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ar.scacchipa.e_commerce.data.Item
+import ar.scacchipa.e_commerce.data.getFruitList
 
 class CommonItemsViewModel: ViewModel() {
 
-    private val viewModel = MutableLiveData<List<Item>>()
+    val fruitsList = getFruitList()
 
-    fun setCommonItems(items: List<Item>) {
-        viewModel.value = items
+    private val listItemLD = MutableLiveData<List<Item>>()
+
+    init {
+        loadItems()
+    }
+
+    fun loadItems() {
+        listItemLD.value = fruitsList
     }
 
     fun getCommonItems(): List<Item> {
-        return viewModel.value?.filter { fruit -> fruit.highlighted.not() }?: listOf()
+        return listItemLD.value?.filter { fruit -> fruit.highlighted.not() } ?: listOf()
     }
 }

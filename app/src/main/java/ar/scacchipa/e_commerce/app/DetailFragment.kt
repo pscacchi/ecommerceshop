@@ -1,13 +1,13 @@
 package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.ScreenDetailBinding
 import ar.scacchipa.e_commerce.viewmodel.DetailViewModel
@@ -18,6 +18,10 @@ class DetailFragment: Fragment() {
     private val args: DetailFragmentArgs by navArgs()
     private val detailViewModel: DetailViewModel by viewModels()
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -44,11 +48,6 @@ class DetailFragment: Fragment() {
                         .actionDetailFragmentToCartFragment(CartItem(_item, 1))
                     view.findNavController().navigate(action)
                 }
-                bind.backDetailButton.setOnClickListener { view ->
-                    val action = DetailFragmentDirections
-                        .actionDetailFragmentToGondolaFragment()
-                    view.findNavController().navigate(action)
-                }
             }
         }
         return binding?.root
@@ -61,7 +60,18 @@ class DetailFragment: Fragment() {
                 android.R.drawable.btn_star_big_off
         )
     }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_menu, menu)
+        menu.findItem(R.id.action_back).isVisible = true
+        menu.findItem(R.id.action_cart).isVisible = false
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_back -> findNavController().navigateUp()
+        }
+        return true
+    }
     override fun onDestroy() {
         super.onDestroy()
         binding = null

@@ -36,7 +36,9 @@ class CartFragment: Fragment() {
             args.submittedCard?.item,
             args.submittedCard?.itemCount?:0)
         itemCartItemVM.addObserver(this) {
-            binding?.cartRecyclerView?.adapter = CartCardAdapter(itemCartItemVM.getCardList())
+            binding?.cartRecyclerView?.adapter = CartCardAdapter(
+                itemCartItemVM.getCardList(),
+                itemCartItemVM)
         }
         binding?.let { _binding ->
             _binding.cartTotal.text = "$%.${2}f".format(
@@ -44,7 +46,9 @@ class CartFragment: Fragment() {
                     acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
                 })
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
-            _binding.cartRecyclerView.adapter = CartCardAdapter(itemCartItemVM.getCardList())
+            _binding.cartRecyclerView.adapter = CartCardAdapter(
+                itemCartItemVM.getCardList(),
+                itemCartItemVM)
 
             _binding.paymentButton.setOnClickListener { view ->
                 val itemList = itemCartItemVM.getCardList()

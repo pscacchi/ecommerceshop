@@ -1,16 +1,15 @@
 package ar.scacchipa.e_commerce.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import ar.scacchipa.e_commerce.NavGraphDirections
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.LayoutCardviewCartItemBinding
+import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
 class CartCardAdapter (
-    private val itemList: List<CartItem>
+    private val itemList: List<CartItem>,
+    private val itemCardVM: ItemCartViewModel
 ): RecyclerView.Adapter<CartCardAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: LayoutCardviewCartItemBinding)
@@ -23,7 +22,6 @@ class CartCardAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.i("Cart position", position.toString())
         val card = itemList[position]
         card.item?.let { _item ->
             holder.binding.cartItemTitle.text = _item.title
@@ -32,14 +30,10 @@ class CartCardAdapter (
             holder.binding.elementCount.text = card.itemCount.toString()
             holder.binding.ranking.text = "#${_item.ranking}"
             holder.binding.addOne.setOnClickListener { view ->
-                val action = NavGraphDirections
-                    .actionGlobalCartFragment(CartItem(_item, 1))
-                view.findNavController().navigate(action)
+                itemCardVM.addCard(card.item, 1)
             }
             holder.binding.removeOne.setOnClickListener { view ->
-                val action = NavGraphDirections
-                    .actionGlobalCartFragment(CartItem(_item, -1))
-                view.findNavController().navigate(action)
+                itemCardVM.addCard(card.item, - 1)
             }
         }
     }

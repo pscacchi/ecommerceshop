@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/item_highlighted_card_size"
-    android:layout_height="@dimen/item_highlighted_card_size"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_margin="4dp"
     app:cardCornerRadius="30dp"
     app:cardElevation="5dp">
@@ -29,16 +29,19 @@
 
         <TextView
             android:id="@+id/highlightedItemTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="4dp"
-            tools:text="Manzana verde"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/huge_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
             android:textColor="@color/secundaryTitle"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/highlightedItemPrice"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline10" />
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
+            tools:text="Manzana verde" />
 
         <TextView
             android:id="@+id/highlightedItemPrice"

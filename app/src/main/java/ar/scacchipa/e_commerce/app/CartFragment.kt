@@ -38,12 +38,10 @@ class CartFragment: Fragment() {
         itemCartItemVM.addObserver(this) {
             (binding?.cartRecyclerView?.adapter as CartCardAdapter)
                 .updateCardList(itemCartItemVM.getCardList())
+            binding?.cartTotal?.text = calcTotalPrice()
         }
         binding?.let { _binding ->
-            _binding.cartTotal.text = "$%.${2}f".format(
-                itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
-                    acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
-                })
+            _binding.cartTotal.text = calcTotalPrice()
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
             _binding.cartRecyclerView.adapter = CartCardAdapter(
                 itemCartItemVM.getCardList(),
@@ -87,5 +85,12 @@ class CartFragment: Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         binding = null
+    }
+
+    fun calcTotalPrice(): String {
+        return "$%.${2}f".format(
+            itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
+                acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
+            })
     }
 }

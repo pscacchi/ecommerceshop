@@ -20,6 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/topAppBar"
+            android:background="@color/white"
+            app:titleTextColor="@color/purple_700"
             app:title="E-Commerce Shop"
             app:menu="@menu/toolbar_menu"
             android:fitsSystemWindows="true"

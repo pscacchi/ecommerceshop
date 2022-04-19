@@ -2,6 +2,7 @@ package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
@@ -42,12 +43,7 @@ class GondolaFragment: Fragment() {
             container?.context, LinearLayoutManager.VERTICAL, false)
         binding?.commonItemrecyclerView?.adapter = CommonItemAdapter(commonItemsVM.getCommonItems())
 
-//        binding?.cartImageView?.setOnClickListener { view ->
-//            val action = NavGraphDirections
-//                .actionGlobalCartFragment( null )
-//            view.findNavController().navigate(action)
-//        }
-
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return binding?.root
     }
 

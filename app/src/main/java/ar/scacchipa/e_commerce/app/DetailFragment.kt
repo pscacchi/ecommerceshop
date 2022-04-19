@@ -2,6 +2,7 @@ package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -29,7 +30,6 @@ class DetailFragment: Fragment() {
     ): View? {
         binding = ScreenDetailBinding.inflate(inflater, container, false)
         detailViewModel.setItem(args.item)
-
         detailViewModel.addObserver(this) { refreshView() }
 
         detailViewModel.getItem()?.let { _item ->
@@ -48,8 +48,10 @@ class DetailFragment: Fragment() {
                         .actionDetailFragmentToCartFragment(CartItem(_item, 1))
                     view.findNavController().navigate(action)
                 }
+                bind.addItemButton
             }
         }
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         return binding?.root
     }
     fun refreshView() {
@@ -62,16 +64,18 @@ class DetailFragment: Fragment() {
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
-        menu.findItem(R.id.action_back).isVisible = true
+        menu.findItem(R.id.action_back).isVisible = false
         menu.findItem(R.id.action_cart).isVisible = false
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_back -> findNavController().navigateUp()
+            android.R.id.home -> findNavController().navigateUp()
         }
         return true
     }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null

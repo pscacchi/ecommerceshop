@@ -3,6 +3,7 @@ package ar.scacchipa.e_commerce.app
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavDirections
@@ -63,17 +64,23 @@ class CartFragment: Fragment() {
                 itemCartItemVM.clear()
             }
         }
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         return binding?.root
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
-        menu.findItem(R.id.action_back).isVisible = true
+        menu.findItem(R.id.action_back).isVisible = false
         menu.findItem(R.id.action_cart).isVisible = false
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_back -> {
+                val action: NavDirections = CartFragmentDirections
+                    .actionCartFragmentToGondolaFragment()
+                findNavController().navigate(action)
+            }
+            android.R.id.home -> {
                 val action: NavDirections = CartFragmentDirections
                     .actionCartFragmentToGondolaFragment()
                 findNavController().navigate(action)

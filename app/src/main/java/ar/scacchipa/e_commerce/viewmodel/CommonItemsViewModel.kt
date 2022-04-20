@@ -7,7 +7,7 @@ import ar.scacchipa.e_commerce.data.getFruitList
 
 class CommonItemsViewModel: ViewModel() {
 
-    val fruitsList = getFruitList()
+    private val fruitsList = getFruitList()
 
     private val listItemLD = MutableLiveData<List<Item>>()
 
@@ -15,7 +15,7 @@ class CommonItemsViewModel: ViewModel() {
         loadItems()
     }
 
-    fun loadItems() {
+    private fun loadItems() {
         listItemLD.value = fruitsList
     }
 

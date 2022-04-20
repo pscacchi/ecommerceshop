@@ -35,14 +35,14 @@ class DetailFragment: Fragment() {
         detailViewModel.getItem()?.let { _item ->
             binding?.let { bind ->
                 bind.title.text = _item.title
-                bind.ranking.text = "#${_item.ranking}"
+                bind.ranking.text = getString(R.string.raking_placeholder, _item.ranking.toString())
                 bind.category.text = _item.category
                 refreshView()
                 bind.favorite.setOnClickListener {
                     detailViewModel.toggleFavorite()
                 }
                 bind.detailItemImage.setImageResource(_item.imageId)
-                bind.addItemButton.text = "Add to cart | $" + "%.${2}f".format(_item.price)
+                bind.addItemButton.text = getString(R.string.add_item_button_placeholder,_item.price)
                 bind.addItemButton.setOnClickListener { view ->
                     val action = DetailFragmentDirections
                         .actionDetailFragmentToCartFragment(CartItem(_item, 1))
@@ -54,7 +54,8 @@ class DetailFragment: Fragment() {
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         return binding?.root
     }
-    fun refreshView() {
+
+    private fun refreshView() {
         binding?.favorite?.setImageResource(
             if (detailViewModel.getItem()?.favorite == true)
                 android.R.drawable.btn_star_big_on

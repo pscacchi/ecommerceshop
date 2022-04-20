@@ -42,8 +42,10 @@ class CartFragment: Fragment() {
             binding?.cartTotal?.text = calcTotalPrice()
         }
         binding?.let { _binding ->
+            //TODO: The calcTotalPrice() must be performed into the VM is a business logic
             _binding.cartTotal.text = calcTotalPrice()
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
+            //TODO: Avoid recreate adapter each time that you update the list, avoid "screen flashes"
             _binding.cartRecyclerView.adapter = CartCardAdapter(
                 itemCartItemVM.getCardList(),
                 itemCartItemVM)
@@ -53,12 +55,12 @@ class CartFragment: Fragment() {
                 if (itemList.isNotEmpty()) {
                     val countText =
                         when (itemCartItemVM.getCardList().sumOf { item -> item.itemCount }) {
-                            1 -> "a item"
-                            2 -> "two items"
-                            3 -> "three items"
-                            else -> "a lot of things"
+                            1 -> getString(R.string.one_item_text)
+                            2 -> getString(R.string.two_items_text)
+                            3 -> getString(R.string.three_items_text)
+                            else -> getString(R.string.more_than_three_items_text)
                         }
-                    Toast.makeText(view.context, "You have bought $countText", Toast.LENGTH_SHORT)
+                    Toast.makeText(view.context, getString(R.string.toast_message,countText), Toast.LENGTH_SHORT)
                         .show()
                 }
                 itemCartItemVM.clear()
@@ -76,9 +78,7 @@ class CartFragment: Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_back -> {
-                val action: NavDirections = CartFragmentDirections
-                    .actionCartFragmentToGondolaFragment()
-                findNavController().navigate(action)
+                findNavController().navigateUp()
             }
             android.R.id.home -> {
                 val action: NavDirections = CartFragmentDirections
@@ -94,7 +94,7 @@ class CartFragment: Fragment() {
         binding = null
     }
 
-    fun calcTotalPrice(): String {
+    private fun calcTotalPrice(): String {
         return "$%.${2}f".format(
             itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
                 acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount

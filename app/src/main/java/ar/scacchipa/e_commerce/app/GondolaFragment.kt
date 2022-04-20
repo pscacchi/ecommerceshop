@@ -15,6 +15,7 @@ import ar.scacchipa.e_commerce.data.getFruitList
 import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
+//TODO: Add count bumble inside the cart icon :)
 
 class GondolaFragment: Fragment() {
 
@@ -37,7 +38,7 @@ class GondolaFragment: Fragment() {
 
         binding?.highItemRecyclerView?.layoutManager = LinearLayoutManager(
             container?.context, LinearLayoutManager.HORIZONTAL, false)
-        binding?.highItemRecyclerView?.adapter = HighlightedItemAdapter(highlightedItemsVM.getHightedItems())
+        binding?.highItemRecyclerView?.adapter = HighlightedItemAdapter(highlightedItemsVM.getHighlightedItems())
 
         binding?.commonItemrecyclerView?.layoutManager = LinearLayoutManager(
             container?.context, LinearLayoutManager.VERTICAL, false)

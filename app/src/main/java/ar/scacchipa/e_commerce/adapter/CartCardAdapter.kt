@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.LayoutCardviewCartItemBinding
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
@@ -26,14 +27,16 @@ class CartCardAdapter (
         val card = cardList[position]
         card.item?.let { _item ->
             holder.binding.cartItemTitle.text = _item.title
-            holder.binding.cartItemPrice.text = "$" + "%.${2}f".format(_item.price)
+            holder.binding.cartItemPrice.text = holder.itemView.context
+                .getString(R.string.price_placeholder,_item.price);
             holder.binding.cartItemImageView.setImageResource(_item.imageId)
             holder.binding.elementCount.text = card.itemCount.toString()
-            holder.binding.ranking.text = "#${_item.ranking}"
-            holder.binding.addOne.setOnClickListener { view ->
+            holder.binding.ranking.text =  holder.itemView.context
+                .getString(R.string.raking_placeholder,_item.ranking.toString());
+            holder.binding.addOne.setOnClickListener {
                 itemCardVM.addCard(card.item, 1)
             }
-            holder.binding.removeOne.setOnClickListener { view ->
+            holder.binding.removeOne.setOnClickListener {
                 itemCardVM.addCard(card.item, - 1)
             }
         }

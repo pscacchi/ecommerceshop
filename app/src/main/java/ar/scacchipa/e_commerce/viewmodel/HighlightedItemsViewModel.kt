@@ -12,7 +12,7 @@ class HighlightedItemsViewModel: ViewModel() {
         viewModel.value = items
     }
 
-    fun getHightedItems(): List<Item> {
+    fun getHighlightedItems(): List<Item> {
         return viewModel.value?.filter { fruit -> fruit.highlighted }?: listOf()
     }
 }

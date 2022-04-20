@@ -12,13 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.topAppBar)
     }
-
-//    override fun onSupportNavigateUp(): Boolean {
-//        return Navigation.findNavController(this, R.id.nav_graph)
-//            .navigateUp()
-//                || super.onSupportNavigateUp()
-//    }
 }

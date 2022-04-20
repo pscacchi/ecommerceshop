@@ -95,9 +95,9 @@ class CartFragment: Fragment() {
     }
 
     private fun calcTotalPrice(): String {
-        return "$%.${2}f".format(
-            itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
-                acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
-            })
+        val totalPrice = itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
+            acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
+        }
+        return this.context?.getString(R.string.price_placeholder, totalPrice)?:""
     }
 }

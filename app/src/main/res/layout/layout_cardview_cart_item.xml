@@ -11,7 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cartItemConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_on_primary">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/cartItemImageView"
@@ -82,6 +83,7 @@
             android:paddingBottom="@dimen/normal_margin"
             tools:text="10"
             android:textSize="20sp"
+            android:textColor="@color/card_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/addOne"
             app:layout_constraintTop_toTopOf="parent" />
@@ -92,7 +94,7 @@
             android:layout_height="48dp"
             android:layout_marginEnd="@dimen/normal_margin"
             android:background="@android:color/transparent"
-            android:contentDescription="Remove One"
+            android:contentDescription="@string/remove_one"
             android:scaleType="center"
             android:src="@drawable/ic_less_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"
@@ -108,7 +110,7 @@
             android:layout_marginEnd="@dimen/normal_margin"
             android:layout_marginBottom="@dimen/normal_margin"
             android:background="@android:color/transparent"
-            android:contentDescription="Add One"
+            android:contentDescription="@string/add_one"
             android:scaleType="center"
             android:src="@drawable/ic_plus_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"

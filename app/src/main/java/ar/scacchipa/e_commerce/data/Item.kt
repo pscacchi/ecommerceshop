@@ -55,7 +55,7 @@ data class Item(
 
 // TODO : Improve the mock using mockito :D or generate a factory outside the model or an extension
 fun getFruitList(): List<Item> {
-    return listOf<Item>(
+    return listOf(
         Item("Berenjena", 38.95, "Frutas ácidas", 1, false, false,
         R.raw.aubergine),
         Item("Limón", 25.40, "Frutas ácidas", 2, false, false,

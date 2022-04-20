@@ -29,7 +29,8 @@ class HighlightedItemAdapter(
         val item = itemList[position]
 
         holder.binding.highlightedItemTitle.text = item.title
-        holder.binding.highlightedItemPrice.text = "$" + "%.${2}f".format(item.price)
+        holder.binding.highlightedItemPrice.text = holder.itemView.context
+            .getString(R.string.price_placeholder, item.price)
         holder.binding.highItemImageView.setImageResource(item.imageId)
         holder.binding.highItemConstraint.setOnClickListener { v ->
             val action: NavDirections = GondolaFragmentDirections

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/design_default_color_on_primary"
     app:cardCornerRadius="30dp"
     app:cardElevation="5dp">
 
@@ -56,6 +57,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:textColor="@color/card_title"
             tools:text="Category"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"

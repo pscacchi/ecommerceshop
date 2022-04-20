@@ -33,14 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="321dp" />
+        app:layout_constraintTop_toBottomOf="@+id/detailItemImage" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/title"
@@ -49,12 +42,12 @@
         android:layout_marginStart="@dimen/normal_margin"
         android:layout_marginTop="@dimen/large_margin"
         android:layout_marginBottom="@dimen/normal_margin"
-        android:text="Title"
+        tools:text="Title"
         android:textSize="24sp"
         android:textColor="@color/card_title"
         app:layout_constraintBottom_toTopOf="@+id/category"
         app:layout_constraintStart_toEndOf="@+id/ranking"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/backGroundView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/category"
@@ -62,10 +55,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/huge_margin"
         android:layout_marginTop="@dimen/normal_margin"
-        android:text="Category"
+        android:textColor="@color/card_title"
+        tools:text="Category"
         app:layout_constraintBottom_toTopOf="@+id/addItemButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ranking"

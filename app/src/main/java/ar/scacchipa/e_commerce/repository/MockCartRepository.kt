@@ -4,7 +4,9 @@ import android.util.Log
 import ar.scacchipa.e_commerce.data.Item
 
 class MockCartRepository: ICartRepository {
-    val cartList = mutableListOf<Item>()
+
+    private val cartList = mutableListOf<Item>()
+
     override fun addOneItem(item: Item) {
         Log.i("ItemRepository", "AddOneItem $item")
     }

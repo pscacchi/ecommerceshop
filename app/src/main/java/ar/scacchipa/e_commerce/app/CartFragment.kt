@@ -12,7 +12,6 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.adapter.CartCardAdapter
-import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.ScreenCartBinding
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
@@ -39,11 +38,13 @@ class CartFragment: Fragment() {
         itemCartItemVM.addObserver(this) {
             (binding?.cartRecyclerView?.adapter as CartCardAdapter)
                 .updateCardList(itemCartItemVM.getCardList())
-            binding?.cartTotal?.text = calcTotalPrice()
+            binding?.cartTotal?.text = this.context
+                ?.getString(R.string.price_placeholder, itemCartItemVM.calcTotalPrice())?:""
         }
         binding?.let { _binding ->
-            //TODO: The calcTotalPrice() must be performed into the VM is a business logic
-            _binding.cartTotal.text = calcTotalPrice()
+            _binding.cartTotal.text = this.context
+                ?.getString(R.string.price_placeholder, itemCartItemVM.calcTotalPrice())?:""
+
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
             //TODO: Avoid recreate adapter each time that you update the list, avoid "screen flashes"
             _binding.cartRecyclerView.adapter = CartCardAdapter(
@@ -92,12 +93,5 @@ class CartFragment: Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         binding = null
-    }
-
-    private fun calcTotalPrice(): String {
-        val totalPrice = itemCartItemVM.getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
-            acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
-        }
-        return this.context?.getString(R.string.price_placeholder, totalPrice)?:""
     }
 }

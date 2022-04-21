@@ -60,11 +60,11 @@ class CartCardAdapter (
             }
 
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return oldList[oldItemPosition] == newList[newItemPosition]
+                return oldList[oldItemPosition].item?.title == newList[newItemPosition].item?.title
             }
 
             override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return oldList[oldItemPosition] === newList[newItemPosition]
+                return oldList[oldItemPosition] == newList[newItemPosition]
             }
         })
         diff.dispatchUpdatesTo(this)

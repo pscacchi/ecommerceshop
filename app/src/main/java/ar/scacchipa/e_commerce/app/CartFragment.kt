@@ -46,7 +46,6 @@ class CartFragment: Fragment() {
                 ?.getString(R.string.price_placeholder, itemCartItemVM.calcTotalPrice())?:""
 
             _binding.cartRecyclerView.layoutManager = LinearLayoutManager(container?.context)
-            //TODO: Avoid recreate adapter each time that you update the list, avoid "screen flashes"
             _binding.cartRecyclerView.adapter = CartCardAdapter(
                 itemCartItemVM.getCardList(),
                 itemCartItemVM)

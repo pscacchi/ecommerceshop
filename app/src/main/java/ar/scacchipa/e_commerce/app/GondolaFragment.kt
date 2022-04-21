@@ -13,20 +13,22 @@ import ar.scacchipa.e_commerce.adapter.CommonItemAdapter
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
 import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.repository.IItemRepository
-import ar.scacchipa.e_commerce.repository.MockFruitItemRepository
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
+
 //TODO: Add count bumble inside the cart icon :)
 
-class GondolaFragment: Fragment() {
+class GondolaFragment(
+    private val itemRepository: IItemRepository
+): Fragment() {
 
     private var binding: ScreenGondolaBinding? = null
     private val commonItemsVM: CommonItemsViewModel by viewModels()
     private val highlightedItemsVM: HighlightedItemsViewModel by viewModels()
-    private val itemRepository: IItemRepository = MockFruitItemRepository() 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        commonItemsVM.setCommonItems(itemRepository.getItemList())
         highlightedItemsVM.setHighlightedItems(itemRepository.getItemList())
         setHasOptionsMenu(true)
     }

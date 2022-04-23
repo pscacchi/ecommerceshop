@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="4dp"
-    app:cardCornerRadius="30dp"
-    app:cardElevation="5dp">
+    android:layout_margin="@dimen/small_margin"
+    app:cardCornerRadius="@dimen/big_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/highItemConstraint"
@@ -36,7 +36,7 @@
             android:layout_marginStart="@dimen/huge_margin"
             android:layout_marginBottom="@dimen/normal_margin"
             android:textColor="@color/secundaryTitle"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/highlightedItemPrice"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,11 +47,11 @@
             android:id="@+id/highlightedItemPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="@dimen/enormous_margin"
+            android:layout_marginBottom="@dimen/small_margin"
             android:text="$0.00"
             android:textColor="@color/mainPrice"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_large"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline10" />

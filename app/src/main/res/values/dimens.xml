@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="item_highlighted_card_size">176dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
     <dimen name="normal_margin">8dp</dimen>
     <dimen name="large_margin">16dp</dimen>
     <dimen name="huge_margin">24dp</dimen>
+    <dimen name="enormous_margin">36dp</dimen>
+    <dimen name="big_corner_radius">15dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="text_size_huge">24sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="button_size_normal">48dp</dimen>
+
 </resources>

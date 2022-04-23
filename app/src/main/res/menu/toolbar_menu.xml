@@ -7,8 +7,8 @@
         android:title="Cart"
         android:visible="true"
         android:enabled="true"
-        app:actionLayout="@layout/cart_icon_layout"
-        app:showAsAction="always" />
+        app:actionViewClass="ar.scacchipa.e_commerce.ui.IndicatorActionLayout"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_back"
         android:title="Back"

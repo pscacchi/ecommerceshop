@@ -2,9 +2,6 @@ package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.cardview.widget.CardView
-import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -16,6 +13,7 @@ import ar.scacchipa.e_commerce.adapter.CommonItemAdapter
 import ar.scacchipa.e_commerce.adapter.HighlightedItemAdapter
 import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.repository.IItemRepository
+import ar.scacchipa.e_commerce.ui.IndicatorActionLayout
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
@@ -64,12 +62,13 @@ class GondolaFragment(
         menu.findItem(R.id.action_back).isVisible = false
         menu.findItem(R.id.action_cart).isVisible = true
 
-        val bubbleCounterView = menu.findItem(R.id.action_cart)
-            .actionView.findViewById<CardView>(R.id.bubble_counter_view)
-
-        val bubbleText = bubbleCounterView.children.first() as AppCompatTextView
-
-        bubbleText.text = itemCartItemVM.getProductCount().toString()
+        menu.findItem(R.id.action_cart).apply {
+            isVisible = true
+            (actionView as IndicatorActionLayout).setNum( itemCartItemVM.getProductCount())
+            actionView.setOnClickListener {
+                onOptionsItemSelected(this)
+            }
+        }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {

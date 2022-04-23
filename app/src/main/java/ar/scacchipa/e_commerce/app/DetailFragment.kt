@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -11,13 +12,16 @@ import androidx.navigation.fragment.navArgs
 import ar.scacchipa.e_commerce.R
 import ar.scacchipa.e_commerce.data.CartItem
 import ar.scacchipa.e_commerce.databinding.ScreenDetailBinding
+import ar.scacchipa.e_commerce.ui.IndicatorActionLayout
 import ar.scacchipa.e_commerce.viewmodel.DetailViewModel
+import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
 class DetailFragment: Fragment() {
 
     private var binding: ScreenDetailBinding? = null
     private val args: DetailFragmentArgs by navArgs()
     private val detailViewModel: DetailViewModel by viewModels()
+    private val itemCartItemVM: ItemCartViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +71,14 @@ class DetailFragment: Fragment() {
         inflater.inflate(R.menu.toolbar_menu, menu)
         menu.findItem(R.id.action_back).isVisible = false
         menu.findItem(R.id.action_cart).isVisible = false
+
+        menu.findItem(R.id.action_cart).apply {
+            isVisible = true
+            (actionView as IndicatorActionLayout).setNum( itemCartItemVM.getProductCount())
+            actionView.setOnClickListener {
+                onOptionsItemSelected(this)
+            }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -3,17 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/action_cart"
+        android:title="Cart"
+        android:visible="true"
+        android:enabled="true"
+        app:actionLayout="@layout/cart_icon_layout"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_back"
         android:title="Back"
         android:visible="false"
         android:enabled="true"
         android:icon="@drawable/ic_back_svgrepo_com"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_cart"
-        android:title="Cart"
-        android:visible="true"
-        android:enabled="true"
-        android:icon="@drawable/ic_cart_svgrepo_com"
         app:showAsAction="ifRoom" />
 </menu>

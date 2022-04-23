@@ -44,5 +44,9 @@ class ItemCartViewModel: ViewModel() {
             acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
         }
     }
-
+    fun getProductCount(): Int {
+        return cards.value?.fold(0) {acc: Int, cartItem: CartItem ->
+            acc +  cartItem.itemCount
+        }?:0
+    }
 }

@@ -2,8 +2,11 @@ package ar.scacchipa.e_commerce.app
 
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.cardview.widget.CardView
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
@@ -15,6 +18,7 @@ import ar.scacchipa.e_commerce.databinding.ScreenGondolaBinding
 import ar.scacchipa.e_commerce.repository.IItemRepository
 import ar.scacchipa.e_commerce.viewmodel.CommonItemsViewModel
 import ar.scacchipa.e_commerce.viewmodel.HighlightedItemsViewModel
+import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
 //TODO: Add count bumble inside the cart icon :)
 
@@ -25,6 +29,7 @@ class GondolaFragment(
     private var binding: ScreenGondolaBinding? = null
     private val commonItemsVM: CommonItemsViewModel by viewModels()
     private val highlightedItemsVM: HighlightedItemsViewModel by viewModels()
+    private val itemCartItemVM: ItemCartViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,14 +46,16 @@ class GondolaFragment(
         binding = ScreenGondolaBinding.inflate(inflater, container, false)
 
         binding?.highItemRecyclerView?.layoutManager = LinearLayoutManager(
-            container?.context, LinearLayoutManager.HORIZONTAL, false)
-        binding?.highItemRecyclerView?.adapter = HighlightedItemAdapter(highlightedItemsVM.getHighlightedItems())
+            container?.context, LinearLayoutManager.HORIZONTAL, false
+        )
+        binding?.highItemRecyclerView?.adapter =
+            HighlightedItemAdapter(highlightedItemsVM.getHighlightedItems())
 
         binding?.commonItemrecyclerView?.layoutManager = LinearLayoutManager(
-            container?.context, LinearLayoutManager.VERTICAL, false)
+            container?.context, LinearLayoutManager.VERTICAL, false
+        )
         binding?.commonItemrecyclerView?.adapter = CommonItemAdapter(commonItemsVM.getCommonItems())
 
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return binding?.root
     }
 
@@ -56,8 +63,14 @@ class GondolaFragment(
         inflater.inflate(R.menu.toolbar_menu, menu)
         menu.findItem(R.id.action_back).isVisible = false
         menu.findItem(R.id.action_cart).isVisible = true
-    }
 
+        val bubbleCounterView = menu.findItem(R.id.action_cart)
+            .actionView.findViewById<CardView>(R.id.bubble_counter_view)
+
+        val bubbleText = bubbleCounterView.children.first() as AppCompatTextView
+
+        bubbleText.text = itemCartItemVM.getProductCount().toString()
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_cart -> {

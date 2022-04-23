@@ -15,7 +15,9 @@ import ar.scacchipa.e_commerce.adapter.CartCardAdapter
 import ar.scacchipa.e_commerce.databinding.ScreenCartBinding
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
-class CartFragment: Fragment() {
+class CartFragment(
+
+): Fragment() {
 
     private val itemCartItemVM: ItemCartViewModel by activityViewModels()
     private val args: CartFragmentArgs by navArgs()

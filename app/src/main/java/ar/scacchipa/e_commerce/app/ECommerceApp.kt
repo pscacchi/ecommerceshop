@@ -9,13 +9,6 @@ import org.koin.androidx.fragment.koin.fragmentFactory
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 
-val appModule = module {
-    single<IItemRepository> { MockFruitItemRepository() as IItemRepository }
-    fragment<GondolaFragment> { GondolaFragment( get() ) }
-    fragment<DetailFragment> { DetailFragment() }
-    fragment<CartFragment> { CartFragment() }
-}
-
 class ECommerceApp: Application() {
     override fun onCreate() {
         super.onCreate()

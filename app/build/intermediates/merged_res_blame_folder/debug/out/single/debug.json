@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_aubergine.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\aubergine.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_tangerine.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\tangerine.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_screen_detail.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_almond.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\almond.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\menu_toolbar_menu.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\menu\\toolbar_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_pineapple.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\pineapple.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_cardview_cart_item.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_cart_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_less_square.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_less_square.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_left_arrow_svgrepo_com.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_left_arrow_svgrepo_com.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_cantalaoupe.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\cantalaoupe.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_cart_svgrepo_com.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_cart_svgrepo_com.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_cardview_highlight_item.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_highlight_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_corner.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_counter_rounder_corner_background.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\counter_rounder_corner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_tomato.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\tomato.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_greenapple.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\greenapple.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_screen_cart.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_plus_square.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_plus_square.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_cardview_gondola_item_card.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_gondola_item_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_cart_icon_layout.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\cart_icon_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_cocoa.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\cocoa.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_limette.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\limette.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable-v31_rounded_corner.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable-v31\\rounded_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_little_rounded_corner.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\little_rounded_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_back_svgrepo_com.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_back_svgrepo_com.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\layout_screen_gondola.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_gondola.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_orange.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\orange.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_fig.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\fig.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_plum.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\plum.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_redapple.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\redapple.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_hazelnuts.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\hazelnuts.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_strawberry.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\strawberry.jpg"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\merged_res\\debug\\raw_lemon.jpg.flat",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\raw\\lemon.jpg"
+    }
+]

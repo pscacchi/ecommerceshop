@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\screen_gondola.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_gondola.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cardview_gondola_item_card.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_gondola_item_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\screen_detail.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\screen_cart.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\screen_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cardview_highlight_item.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_highlight_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cardview_cart_item.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\layout_cardview_cart_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\cart_icon_layout.xml",
+        "source": "C:\\Users\\PScacchi\\AndroidStudioProjects\\Ecommerce\\app\\src\\main\\res\\layout\\cart_icon_layout.xml"
+    }
+]

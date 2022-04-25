@@ -1,0 +1,87 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ar.scacchipa.e_commerce"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:5:5-22:19
+12        android:name="ar.scacchipa.e_commerce.app.ECommerceApp"
+12-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:6:9-41
+13        android:allowBackup="true"
+13-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:7:9-35
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.7.0] C:\Users\PScacchi\.gradle\caches\transforms-3\2035fd659a420c49a9ec2fd87fe9520e\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher"
+16-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:8:9-43
+17        android:label="@string/app_name"
+17-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:9:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:10:9-54
+19        android:supportsRtl="true"
+19-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:11:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.Ecommerce" >
+21-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:12:9-47
+22        <activity
+22-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:13:9-21:20
+23            android:name="ar.scacchipa.e_commerce.app.MainActivity"
+23-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:14:13-45
+24            android:exported="true" >
+24-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:15:13-36
+25            <intent-filter>
+25-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:16:13-20:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:17:17-69
+26-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:17:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:19:17-77
+28-->C:\Users\PScacchi\AndroidStudioProjects\Ecommerce\app\src\main\AndroidManifest.xml:19:27-74
+29            </intent-filter>
+30        </activity>
+31
+32        <uses-library
+32-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+33            android:name="androidx.window.extensions"
+33-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+34            android:required="false" />
+34-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+35        <uses-library
+35-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+36            android:name="androidx.window.sidecar"
+36-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+37            android:required="false" />
+37-->[androidx.window:window:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\1f2e635467c866f480a3aa9085e377e0\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+38
+39        <provider
+39-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+40            android:name="androidx.startup.InitializationProvider"
+40-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+41            android:authorities="ar.scacchipa.e_commerce.androidx-startup"
+41-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+42            android:exported="false" >
+42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+43            <meta-data
+43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+45                android:value="androidx.startup" />
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\PScacchi\.gradle\caches\transforms-3\c41b4b14ed15c5a6b8c98b00f7a0239c\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+46            <meta-data
+46-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\PScacchi\.gradle\caches\transforms-3\ccf6a4df2b9aadbab80063dc2e24c08c\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+47-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\PScacchi\.gradle\caches\transforms-3\ccf6a4df2b9aadbab80063dc2e24c08c\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+48                android:value="androidx.startup" />
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\PScacchi\.gradle\caches\transforms-3\ccf6a4df2b9aadbab80063dc2e24c08c\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+49        </provider>
+50    </application>
+51
+52</manifest>

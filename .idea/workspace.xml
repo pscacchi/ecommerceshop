@@ -482,7 +482,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="withKoin" />
                       </list>
                     </value>
                   </entry>

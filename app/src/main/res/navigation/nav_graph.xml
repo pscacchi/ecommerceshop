@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gondolaFragment">
+
+    <fragment
+        android:id="@+id/gondolaFragment"
+        android:name="ar.scacchipa.e_commerce.app.GondolaFragment"
+        android:label="GondolaFragment" >
+        <action
+            android:id="@+id/action_gondolaFragment_to_detailFragment"
+            app:destination="@id/detailFragment"/>
+        <action
+            android:id="@+id/action_gondolaFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="ar.scacchipa.e_commerce.app.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="item"
+            app:argType="ar.scacchipa.e_commerce.data.Item" />
+        <action
+            android:id="@+id/action_detailFragment_to_gondolaFragment"
+            app:destination="@id/gondolaFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="ar.scacchipa.e_commerce.app.CartFragment"
+        android:label="CartFragment" >
+        <argument
+            android:name="submittedCard"
+            app:argType="ar.scacchipa.e_commerce.data.CartItem"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_cartFragment_to_gondolaFragment"
+            app:destination="@id/gondolaFragment" />
+    </fragment>
+</navigation>

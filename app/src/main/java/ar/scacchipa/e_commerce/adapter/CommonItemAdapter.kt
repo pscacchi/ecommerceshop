@@ -29,7 +29,8 @@ class CommonItemAdapter(
         val item = itemList[position]
 
         holder.binding.commonItemTitle.text = item.title
-        holder.binding.commonItemPrice.text = "$" + "%.${2}f".format(item.price)
+        holder.binding.commonItemPrice.text = holder.itemView.context
+            .getString(R.string.price_placeholder, item.price)
         holder.binding.commonItemCategory.text = item.category
         holder.binding.commonItemImageView.setImageResource(item.imageId)
         holder.binding.commonItemConstraint.setOnClickListener { v ->

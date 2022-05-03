@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/normal_margin"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="5dp">
+    app:cardCornerRadius="@dimen/big_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cartItemConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_on_primary">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/cartItemImageView"
@@ -39,7 +40,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/card_title"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_large"
             app:layout_constraintBottom_toTopOf="@+id/cartItemPrice"
             app:layout_constraintEnd_toStartOf="@+id/removeOne"
             app:layout_constraintStart_toEndOf="@+id/ranking"
@@ -55,7 +56,7 @@
             android:layout_marginEnd="@dimen/normal_margin"
             android:layout_marginBottom="@dimen/huge_margin"
             android:textColor="@color/secundaryPrice"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/removeOne"
             app:layout_constraintStart_toEndOf="@+id/cartItemImageView"
@@ -81,18 +82,19 @@
             android:paddingTop="@dimen/normal_margin"
             android:paddingBottom="@dimen/normal_margin"
             tools:text="10"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/card_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/addOne"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/removeOne"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/button_size_normal"
+            android:layout_height="@dimen/button_size_normal"
             android:layout_marginEnd="@dimen/normal_margin"
             android:background="@android:color/transparent"
-            android:contentDescription="Remove One"
+            android:contentDescription="@string/remove_one"
             android:scaleType="center"
             android:src="@drawable/ic_less_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"
@@ -102,13 +104,13 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/addOne"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/button_size_normal"
+            android:layout_height="@dimen/button_size_normal"
             android:layout_marginTop="@dimen/normal_margin"
             android:layout_marginEnd="@dimen/normal_margin"
             android:layout_marginBottom="@dimen/normal_margin"
             android:background="@android:color/transparent"
-            android:contentDescription="Add One"
+            android:contentDescription="@string/add_one"
             android:scaleType="center"
             android:src="@drawable/ic_plus_square"
             app:layout_constraintBottom_toBottomOf="@+id/elementCount"

@@ -10,7 +10,7 @@ import ar.scacchipa.e_commerce.databinding.LayoutCardviewCartItemBinding
 import ar.scacchipa.e_commerce.viewmodel.ItemCartViewModel
 
 class CartCardAdapter (
-    var cardList: List<CartItem>,
+    private var cardList: List<CartItem>,
     private val itemCardVM: ItemCartViewModel
 ): RecyclerView.Adapter<CartCardAdapter.ViewHolder>() {
 
@@ -28,11 +28,11 @@ class CartCardAdapter (
         card.item?.let { _item ->
             holder.binding.cartItemTitle.text = _item.title
             holder.binding.cartItemPrice.text = holder.itemView.context
-                .getString(R.string.price_placeholder,_item.price);
+                .getString(R.string.price_placeholder,_item.price)
             holder.binding.cartItemImageView.setImageResource(_item.imageId)
             holder.binding.elementCount.text = card.itemCount.toString()
             holder.binding.ranking.text =  holder.itemView.context
-                .getString(R.string.raking_placeholder,_item.ranking.toString());
+                .getString(R.string.raking_placeholder,_item.ranking.toString())
             holder.binding.addOne.setOnClickListener {
                 itemCardVM.addCard(card.item, 1)
             }
@@ -60,11 +60,11 @@ class CartCardAdapter (
             }
 
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return oldList[oldItemPosition] == newList[newItemPosition]
+                return oldList[oldItemPosition].item?.title == newList[newItemPosition].item?.title
             }
 
             override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return oldList[oldItemPosition] === newList[newItemPosition]
+                return oldList[oldItemPosition] == newList[newItemPosition]
             }
         })
         diff.dispatchUpdatesTo(this)

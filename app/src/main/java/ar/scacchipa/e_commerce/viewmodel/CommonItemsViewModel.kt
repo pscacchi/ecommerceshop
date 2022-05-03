@@ -3,20 +3,13 @@ package ar.scacchipa.e_commerce.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ar.scacchipa.e_commerce.data.Item
-import ar.scacchipa.e_commerce.data.getFruitList
 
 class CommonItemsViewModel: ViewModel() {
 
-    private val fruitsList = getFruitList()
-
     private val listItemLD = MutableLiveData<List<Item>>()
 
-    init {
-        loadItems()
-    }
-
-    private fun loadItems() {
-        listItemLD.value = fruitsList
+    fun setCommonItems(itemList: List<Item>) {
+        listItemLD.value = itemList
     }
 
     fun getCommonItems(): List<Item> {

@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">E-commerce</string>
     <string name="raking_placeholder">#%1$s</string>
-    <string name="add_item_button_placeholder">Add to cart | $ %1$f</string>
-    <string name="price_placeholder">$ %1$f</string>
+    <string name="add_item_button_placeholder">Add to cart | $ %1.2f</string>
+    <string name="price_placeholder">$ %1$.2f</string>
     <string name="toast_message">You have bought %1$s</string>
     <string name="one_item_text">a item</string>
     <string name="two_items_text">two items</string>
     <string name="three_items_text">three items</string>
     <string name="more_than_three_items_text">a lot of things</string>
+    <string name="remove_one">Remove One</string>
+    <string name="add_one">Add One</string>
 </resources>

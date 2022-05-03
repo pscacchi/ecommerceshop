@@ -39,4 +39,14 @@ class ItemCartViewModel: ViewModel() {
         cards.observe(owner, observer)
     }
 
+    fun calcTotalPrice(): Double {
+        return getCardList().fold(0.0) { acc: Double, cartItem: CartItem ->
+            acc + (cartItem.item?.price ?: 0.0) * cartItem.itemCount
+        }
+    }
+    fun getProductCount(): Int {
+        return cards.value?.fold(0) {acc: Int, cartItem: CartItem ->
+            acc +  cartItem.itemCount
+        }?:0
+    }
 }

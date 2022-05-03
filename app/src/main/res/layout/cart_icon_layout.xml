@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/button_size_normal"
+    android:layout_height="@dimen/button_size_normal">
+
+    <ImageView
+        android:id="@+id/icon_layout_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_cart_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bubble_counter_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-2dp"
+        android:visibility="invisible"
+        android:background="@drawable/counter_rounder_corner_background"
+        app:layout_constraintBottom_toBottomOf="@+id/counter_number_text"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/counter_number_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/counter_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/icon_layout_imageview"
+        app:layout_constraintStart_toStartOf="@+id/bubble_counter_view"
+        app:layout_constraintTop_toTopOf="@+id/icon_layout_imageview"
+        tools:text="99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
